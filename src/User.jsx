@@ -7,7 +7,7 @@ const [users, setUsers] = useState([{name: "", age:null, email : ""}])
 
 useEffect( ()=>
 {
-  axios.get('http://localhost:3000/')
+  axios.get(`${url}/`)
   .then(res=> setUsers(res.data))
   .catch(err=> console.log(err)
   )

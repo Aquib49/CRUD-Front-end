@@ -12,7 +12,7 @@ function UpdateUser() {
   // Fetch user data on component mount
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/getUser/${id}`)
+      .get(`${url}/getUser/${id}`)
       .then((result) => {
         if (result.data) {
           setName(result.data.name);

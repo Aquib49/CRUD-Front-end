@@ -19,7 +19,7 @@ function CreateUser() {
     }
 
     try {
-      const res = await axios.post('http://localhost:3000/createUser', { name, email, age });
+      const res = await axios.post(`${url}/createUser`, { name, email, age });
       console.log('User Created:', res.data);
       navigate('/');
     } catch (err) {
